@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Sistema de comentarios</title>
+    <link rel="stylesheet" href="{% static 'app/xss.css' %}"  />
+  </head>
+  <body>
+    <h1>Comentarios del curso</h1>
+    <p>¡Hola! En este espacio puedes escribir tus comentarios y sugerencias sobre este curso, PumaHat Cybersecurity Team. Solo respeta las reglas de etiqueta, y no rompas nada :)</p>
+    <form action="/xss" method="post">
+      {% csrf_token %}
+      <fieldset>
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+        <div><label for="nombre">Nombre:</label> <input type="text" id="nombre" name="nombre" /></div>
+        <div><label for="color">Color:</label> <input type="color" id="color" name="color" /></div>
+        <div><label for="texto">Comentario:</label> <textarea id="texto" name="texto"></textarea></div>
+        <button type="submit">Comentar</button>
+      </fieldset>
+    </form>
+    <h2>Lista de comentarios</h2>
+    {% if comentarios %}<div>
+      {% for c in comentarios %}
+        <div id="comm-{{ c.id }}" style="--c: {{ c.color | safe }};" ><h3>{{ c.nombre }}</h3><time>{{ c.fecha }}</time><p>{{ c.texto }}</p></div>
+      {% endfor %}
+    {% else %}
+      <p>Coloca un comentario!</p>
+    </div>{% endif %}
+  </body>
+</html>
