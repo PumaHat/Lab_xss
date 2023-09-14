@@ -20,5 +20,6 @@ from django.conf import settings
 
 urlpatterns = [
     path("xss", include("xss.urls")),
+    path("xsssimple", include("xsssimple.urls")),
     path('admin/', admin.site.urls),
 ]
