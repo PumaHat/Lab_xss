@@ -8,7 +8,7 @@ from .models import ComentarioSimple
 class Index(View):
     def get(self, request): 
         comentarios = ComentarioSimple.objects.order_by("-fecha")
-        template = loader.get_template("xss/index.html")
+        template = loader.get_template("xsssimple/index.html")
         context = {
             "comentarios": comentarios,
         }
