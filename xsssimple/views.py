@@ -20,5 +20,4 @@ class Index(View):
             nuevo_com.save()
             return HttpResponseRedirect("/xsssimple")
         except Exception as e:
-            raise e
             return HttpResponseRedirect("/xsssimple")

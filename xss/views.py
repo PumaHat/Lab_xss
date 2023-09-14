@@ -15,11 +15,9 @@ class Index(View):
         return HttpResponse(template.render(context, request))
 
     def post(self, request, *args, **kwargs):
-        print("entro")
         try:
             nuevo_com = Comentario(texto=request.POST['texto'], nombre=request.POST['nombre'], color=request.POST['color'])
             nuevo_com.save()
             return HttpResponseRedirect("/xss")
         except Exception as e:
-            raise e
             return HttpResponseRedirect("/xss")
