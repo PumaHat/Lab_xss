@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-vhu6cvmf+bo!yjajpiy6h++c-y^1@&9p&ui-1i(1i!m3s*w+-n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
-
+ALLOWED_HOSTS = ["phct.campanita.xyz", "localhost"]
+CSRF_TRUSTED_ORIGINS = ["https://phct.campanita.xyz"]
 
 # Application definition
 
