@@ -1,11 +1,12 @@
 FROM python:alpine
 
+ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
-RUN mkdir /srv/xss
 
-WORKDIR /srv/xss
-COPY . /srv/xss
+COPY requirements.txt /srv/
+COPY src /srv/src
 RUN pip3 install -r requirements.txt
+WORKDIR /srv/src
 
 EXPOSE 8000
 
