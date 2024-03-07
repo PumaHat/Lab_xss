@@ -8,7 +8,7 @@ El código HTML de la pantalla principal sin ningún comentario es el siguiente:
 
 ![](/docs/1.png)
 
-Una vez que hacemos un comentario, se puede observar la estructura, la cual consiste en una etiqueta contenedora `<div>` con un id y un atributo `style` para el color, una etiqueta `<h3>` para el nombre, una etiqueta `<time>` para la hora y fecha y finalmente una etiqueta `<p> para el comentario.
+Una vez que hacemos un comentario, se puede observar la estructura, la cual consiste en una etiqueta contenedora `<div>` con un id y un atributo `style` para el color, una etiqueta `<h3>` para el nombre, una etiqueta `<time>` para la hora y fecha y finalmente una etiqueta `<p>` para el comentario.
 
 ![](/docs/2.png)
 
