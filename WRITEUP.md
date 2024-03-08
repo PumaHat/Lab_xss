@@ -29,7 +29,7 @@ En el segundo laboratorio, cuando intentamos inyectar código HTML, se puede obs
 
 ![](/docs/6.png)
 
-Las posibles entradas de datos a simple vista son el campo de nombre y comentarios, pero ninguno de estos es vulnerable a ataques XSS, por otro lado, existe otro input (el de color).
+Las posibles entradas de datos a simple vista son el campo de nombre y comentarios, pero ninguno de estos es vulnerable a ataques XSS, por otro lado, existe otra entrada (el `input` para el color).
 
 ![](/docs/7.png)
 

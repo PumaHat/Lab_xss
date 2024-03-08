@@ -1,5 +1,6 @@
 {
   "nombre": "Comentarios de clase",
+  "descripcion": "Deja tus comentarios sobre las clases de PumaHat",
   "temas": [
     "xss"
   ]
